@@ -1,0 +1,25 @@
+extends baseTemplate
+
+block content 
+    // LOGIN FORM
+    main.main
+      .card-container
+        .card
+          .card__header
+            .card__details
+              h1 Login
+              p.card__text Please enter the following details
+              .card__data
+             
+              form(action='/api/v1/users/login/' method='post')
+                label(for='email') Email:
+                br
+                input(type='text' id='email' name='email')
+                br 
+                br
+                label(for='password') Password:
+                br
+                input(type='password' id='password' name='password')
+                br
+                br
+                input.card__sub-heading( type='submit' value='Log In')

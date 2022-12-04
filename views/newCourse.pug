@@ -1,0 +1,39 @@
+extends baseTemplate
+
+block content 
+  main.main
+    .card-container
+      .card
+        .card__header
+          h3.heading-tertirary
+            span Sign In
+        .card__details
+          h4.card__sub-heading New Course 
+          p.card__text
+            | Please enter the following Details
+          .card__data
+            svg.card__icon
+              use(xlink:href='img/icons.svg#icon-map-pin')
+            form(action='/newCourse')
+              label(for='cname') Course Name:
+              input#cname(type='text' name='cname')
+              br
+              br
+              label(for='iname') Instructor Name:
+              input#lname(type='text' iname='iname')
+              br
+              br
+              label(for='description') Email:
+              input#description(type='description' name='description')
+              br
+              br
+              label(for='credits') Password:
+              input#credits(type='credits' name='credits')
+              br
+              br
+              label(for='startDate') Start Date:
+              input#startDate(type='date' name='startDate')
+              br
+              br
+              input.card__sub-heading(type='submit' value='Submit')
+

@@ -1,0 +1,57 @@
+extends baseTemplate
+
+block content 
+  h1 Create new loan
+  main.main
+    .card-container
+      .card
+        .card__header
+          h3.heading-tertirary
+            span Create a new loan
+        .card__details
+          h4.card__sub-heading New Loan information
+          p.card__text
+          |   Please enter the following Details
+          .card__data
+            svg.card__icon
+              use(xlink:href='img/icons.svg#icon-map-pin')
+            form(action='/api/v1/loans/' method='post')
+              label(for='name') Name:
+              input#name(type='text' name='name')
+              br
+              br
+              label(for='loanType') Loan Type:
+              br
+              input#html(type='radio' name='loanType' value='Car')
+              label(for='loanType') Car
+              br
+              input#html(type='radio' name='loanType' value='Home')
+              label(for='loanType') Home
+              br
+              input#html(type='radio' name='loanType' value='Personal')
+              label(for='loanType') Personal
+              br
+              input#html(type='radio' name='loanType' value='Education')
+              label(for='loanType') Education
+              br
+              br
+              label(for='startDate') startDate:
+              input#startDate(type='text' name='startDate')
+              br
+              br
+              label(for='loanTermYears') loanTermYears:
+              input#loanTermYears(type='text' name='loanTermYears')
+              br
+              br
+              label(for='phoneNumber') Phone Number:
+              input#phoneNumber(type='text' name='phoneNumber')
+              br
+              br
+              label(for='loanAmount') Amount:
+              input#loanAmount(type='text' name='loanAmount')
+              label(for='interest') interestRate:
+              input#interest(type='text' name='interest')
+              br
+              br
+              input.card__sub-heading(type='submit' value='Submit')
+ 

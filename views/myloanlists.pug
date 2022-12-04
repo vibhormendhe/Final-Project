@@ -1,0 +1,21 @@
+extends baseTemplate
+
+block content 
+  h1 List of my loans
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='col') Name
+          th(scope='col') Loan Type
+          th(scope='col') Amount
+          th(scope='col') Interest Rate
+          th(scope='col') Loan Term Years
+      tbody
+        each loan in loans
+          tr.table-secondary
+            td=loan.name
+            td=loan.loanType
+            td=loan.loanAmount
+            td=loan.interest
+            td=loan.loanTermYears

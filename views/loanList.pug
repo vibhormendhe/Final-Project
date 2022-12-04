@@ -1,0 +1,23 @@
+extends baseTemplate
+
+block content
+  h1
+    span List of Loans
+  table.table-header
+    thead
+      tr
+        th(scope='col') Name
+        th(scope='col') Type of Loan
+        th(scope='col') Phone Number
+        th(scope='col') Amount
+        th(scope='col') Interest Rate (%)
+        th(scope='col') Term (Yrs)
+    tbody
+      each loan in loans
+        tr.table-secondary
+          td=loan.name
+          td=loan.loanType
+          td=loan.phoneNumber
+          td=loan.loanAmount
+          td=loan.interest
+          td=loan.loanTermYears
